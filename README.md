@@ -79,6 +79,8 @@ paddle_to = deberta_v2_tokenizer.DebertaV2Tokenizer.from_pretrained(model_name)
 
 对于单机单卡或者单机多卡的启动脚本及具体参数释义可以参考：https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/language_model/bert
 
+官方训练参数设置请见：https://github.com/microsoft/DeBERTa/blob/master/experiments/glue/mnli.sh
+
 对于单机单卡，启动脚本示例如下所示：
 
 ```shell
@@ -171,9 +173,9 @@ eval loss: 0.17843, acc: 0.912, eval loss: 0.32636, acc: 0.909, eval done total 
 ...
 ```
 
-官方训练参数设置请见：https://github.com/microsoft/DeBERTa/blob/master/experiments/glue/mnli.sh
 
-注意，对于本项目，复现的训练epoch设置不超过官方数值。复现结果达到验收标准。
+
+注意，对于本项目，复现的训练epoch设置不超过官方数值。复现结果展示如下，这里提供了对应复现模型的下载链接。
 
 |                   | 原模型精度 | 复现精度  | 模型地址                                                     |
 | ----------------- | ---------- | --------- | ------------------------------------------------------------ |
