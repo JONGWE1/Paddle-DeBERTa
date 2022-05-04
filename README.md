@@ -177,10 +177,10 @@ eval loss: 0.17843, acc: 0.912, eval loss: 0.32636, acc: 0.909, eval done total 
 
 注意，对于本项目，复现的训练epoch设置不超过官方数值。复现结果展示如下，这里提供了对应复现模型的下载链接。
 
-|                   | 原模型精度 | 复现精度  | 模型地址                                                     |
-| ----------------- | ---------- | --------- | ------------------------------------------------------------ |
-| DeBERTa-large     | 91.1/91.1  | 91.2/91.1 | [deberta-large](https://bj.bcebos.com/v1/ai-studio-online/5109e4dabcff4a6c825b047bd06a838e719aacafb09140d68264cfa6e996d815?responseContentDisposition=attachment%3B%20filename%3Ddeberta-large-mnli.zip) |
-| DeBERTa-v2-xlarge | 91.7/91.6  | 91.7/91.6 | [deberta-v2-xlarge](https://bj.bcebos.com/v1/ai-studio-online/580d558d67b34c958c2a17427789746ed4f37cbd3bf44e8f984855b23d87466a?responseContentDisposition=attachment%3B%20filename%3Ddeberta-v2-xlarge-mnli.zip) |
+|                   | 原模型精度 | 复现精度  | 模型地址                                                     | log                                                          |
+| ----------------- | ---------- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| DeBERTa-large     | 91.1/91.1  | 91.2/91.1 | [deberta-large](https://bj.bcebos.com/v1/ai-studio-online/5109e4dabcff4a6c825b047bd06a838e719aacafb09140d68264cfa6e996d815?responseContentDisposition=attachment%3B%20filename%3Ddeberta-large-mnli.zip) | [deberta-large](https://github.com/JONGWE1/Paddle-DeBERTa/blob/main/log/deberta-large.log) |
+| DeBERTa-v2-xlarge | 91.7/91.6  | 91.7/91.6 | [deberta-v2-xlarge](https://bj.bcebos.com/v1/ai-studio-online/580d558d67b34c958c2a17427789746ed4f37cbd3bf44e8f984855b23d87466a?responseContentDisposition=attachment%3B%20filename%3Ddeberta-v2-xlarge-mnli.zip) | [deberta-v2-xlarge](https://github.com/JONGWE1/Paddle-DeBERTa/blob/main/log/deberta-v2-xlarge.log) |
 
 ### 预测
 
