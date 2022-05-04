@@ -8,7 +8,7 @@
 
 2、官方repository：https://github.com/microsoft/DeBERTa
 
-3、官方repository指示预训练模型从Hugging Face下载：如https://huggingface.co/microsoft/deberta-large等
+3、官方repository指示预训练模型从Hugging Face下载：https://huggingface.co/microsoft/deberta-large
 
 4、安装Transformers库以快速获取基准结果，具体参见Hugging Face官方repository：https://github.com/huggingface/transformers
 
