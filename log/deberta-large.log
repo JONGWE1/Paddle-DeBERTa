@@ -1,0 +1,297 @@
+nohup: 忽略输入
+-----------  Configuration Arguments -----------
+adam_epsilon: 1e-06
+cls_drop_out: 0.1
+device: gpu
+fp16: True
+learning_rate: 3e-06
+logging_steps: 50
+max_seq_length: 128
+max_steps: 12000
+model_name_or_path: deberta-large-mnli
+model_type: deberta
+num_train_epochs: 2
+output_dir: deberta-large-mnli/
+pad_to_max_seq_len: True
+pretrained: None
+return_attention_mask: True
+save_steps: 1000
+seed: 42
+task_name: mnli
+train_batch_size: 64
+val_batch_size: 128
+warmup_proportion: 0.1
+warmup_steps: 1000
+weight_decay: 0.01
+------------------------------------------------
+2022-04-28 15:40:05,852-INFO: unique_endpoints {''}
+[2022-04-28 15:40:08,545] [    INFO] - Already cached /home/aistudio/.paddlenlp/models/deberta-large-mnli/vocab.json
+[2022-04-28 15:40:08,546] [    INFO] - Already cached /home/aistudio/.paddlenlp/models/deberta-large-mnli/merges.txt
+2022-04-28 15:40:08,623-INFO: unique_endpoints {''}
+[2022-04-28 15:40:08,763] [    INFO] - Already cached /home/aistudio/.paddlenlp/models/deberta-large-mnli/9b538f64053145879561c3f946376e2abc7d1409eb284987ad12e6fcb46b2768?responseContentDisposition=attachment%3B%20filename%3Ddeberta-large-mnli.pdparams
+W0428 15:40:08.765311  4304 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 11.0, Runtime API Version: 10.1
+W0428 15:40:08.769404  4304 device_context.cc:465] device: 0, cuDNN Version: 7.6.
+2022-04-28 15:40:19,138-INFO: Using Mixed Precision Training
+global step 50/12000, epoch: 0, batch: 50, rank_id: 0, loss: 3.310051, lr: 0.0000001500, speed: 1.2566 step/s
+global step 100/12000, epoch: 0, batch: 100, rank_id: 0, loss: 3.000348, lr: 0.0000003000, speed: 1.2974 step/s
+global step 150/12000, epoch: 0, batch: 150, rank_id: 0, loss: 2.695600, lr: 0.0000004500, speed: 1.2578 step/s
+global step 200/12000, epoch: 0, batch: 200, rank_id: 0, loss: 3.127353, lr: 0.0000006000, speed: 1.3171 step/s
+global step 250/12000, epoch: 0, batch: 250, rank_id: 0, loss: 3.039918, lr: 0.0000007500, speed: 1.2973 step/s
+global step 300/12000, epoch: 0, batch: 300, rank_id: 0, loss: 2.751602, lr: 0.0000009000, speed: 1.3145 step/s
+global step 350/12000, epoch: 0, batch: 350, rank_id: 0, loss: 2.796363, lr: 0.0000010500, speed: 1.3223 step/s
+global step 400/12000, epoch: 0, batch: 400, rank_id: 0, loss: 2.116415, lr: 0.0000012000, speed: 1.3333 step/s
+global step 450/12000, epoch: 0, batch: 450, rank_id: 0, loss: 2.253888, lr: 0.0000013500, speed: 1.3222 step/s
+global step 500/12000, epoch: 0, batch: 500, rank_id: 0, loss: 1.810908, lr: 0.0000015000, speed: 1.3284 step/s
+global step 550/12000, epoch: 0, batch: 550, rank_id: 0, loss: 1.447084, lr: 0.0000016500, speed: 1.3221 step/s
+global step 600/12000, epoch: 0, batch: 600, rank_id: 0, loss: 1.336363, lr: 0.0000018000, speed: 1.2823 step/s
+global step 650/12000, epoch: 0, batch: 650, rank_id: 0, loss: 1.407097, lr: 0.0000019500, speed: 1.3096 step/s
+global step 700/12000, epoch: 0, batch: 700, rank_id: 0, loss: 1.042147, lr: 0.0000021000, speed: 1.3062 step/s
+global step 750/12000, epoch: 0, batch: 750, rank_id: 0, loss: 0.770687, lr: 0.0000022500, speed: 1.3130 step/s
+global step 800/12000, epoch: 0, batch: 800, rank_id: 0, loss: 0.602710, lr: 0.0000024000, speed: 1.3220 step/s
+global step 850/12000, epoch: 0, batch: 850, rank_id: 0, loss: 0.539142, lr: 0.0000025500, speed: 1.3077 step/s
+global step 900/12000, epoch: 0, batch: 900, rank_id: 0, loss: 0.374306, lr: 0.0000027000, speed: 1.3335 step/s
+global step 950/12000, epoch: 0, batch: 950, rank_id: 0, loss: 0.318062, lr: 0.0000028500, speed: 1.2994 step/s
+global step 1000/12000, epoch: 0, batch: 1000, rank_id: 0, loss: 0.276808, lr: 0.0000030000, speed: 1.3197 step/s
+eval loss: 0.33115, acc: 0.910, eval loss: 0.38015, acc: 0.907, eval done total : 263.2519543170929 s
+[EVAL] The model with matched dev ACC (0.910) and mismatched dev ACC (0.907) was saved at iter 1000.
+global step 1050/12000, epoch: 0, batch: 1050, rank_id: 0, loss: 0.278675, lr: 0.0000029864, speed: 0.1515 step/s
+global step 1100/12000, epoch: 0, batch: 1100, rank_id: 0, loss: 0.173109, lr: 0.0000029727, speed: 1.3232 step/s
+global step 1150/12000, epoch: 0, batch: 1150, rank_id: 0, loss: 0.177317, lr: 0.0000029591, speed: 1.3279 step/s
+global step 1200/12000, epoch: 0, batch: 1200, rank_id: 0, loss: 0.151840, lr: 0.0000029455, speed: 1.3364 step/s
+global step 1250/12000, epoch: 0, batch: 1250, rank_id: 0, loss: 0.168202, lr: 0.0000029318, speed: 1.3363 step/s
+global step 1300/12000, epoch: 0, batch: 1300, rank_id: 0, loss: 0.157031, lr: 0.0000029182, speed: 1.3412 step/s
+global step 1350/12000, epoch: 0, batch: 1350, rank_id: 0, loss: 0.140284, lr: 0.0000029045, speed: 1.3161 step/s
+global step 1400/12000, epoch: 0, batch: 1400, rank_id: 0, loss: 0.067720, lr: 0.0000028909, speed: 1.3228 step/s
+global step 1450/12000, epoch: 0, batch: 1450, rank_id: 0, loss: 0.062620, lr: 0.0000028773, speed: 1.2983 step/s
+global step 1500/12000, epoch: 0, batch: 1500, rank_id: 0, loss: 0.153937, lr: 0.0000028636, speed: 1.3291 step/s
+global step 1550/12000, epoch: 0, batch: 1550, rank_id: 0, loss: 0.112375, lr: 0.0000028500, speed: 1.3338 step/s
+global step 1600/12000, epoch: 0, batch: 1600, rank_id: 0, loss: 0.235694, lr: 0.0000028364, speed: 1.3146 step/s
+global step 1650/12000, epoch: 0, batch: 1650, rank_id: 0, loss: 0.177719, lr: 0.0000028227, speed: 1.3209 step/s
+global step 1700/12000, epoch: 0, batch: 1700, rank_id: 0, loss: 0.062130, lr: 0.0000028091, speed: 1.3246 step/s
+global step 1750/12000, epoch: 0, batch: 1750, rank_id: 0, loss: 0.129519, lr: 0.0000027955, speed: 1.3379 step/s
+global step 1800/12000, epoch: 0, batch: 1800, rank_id: 0, loss: 0.167804, lr: 0.0000027818, speed: 1.3236 step/s
+global step 1850/12000, epoch: 0, batch: 1850, rank_id: 0, loss: 0.075968, lr: 0.0000027682, speed: 1.2853 step/s
+global step 1900/12000, epoch: 0, batch: 1900, rank_id: 0, loss: 0.148560, lr: 0.0000027545, speed: 1.3020 step/s
+global step 1950/12000, epoch: 0, batch: 1950, rank_id: 0, loss: 0.109706, lr: 0.0000027409, speed: 1.3150 step/s
+global step 2000/12000, epoch: 0, batch: 2000, rank_id: 0, loss: 0.126820, lr: 0.0000027273, speed: 1.2928 step/s
+eval loss: 0.18594, acc: 0.912, eval loss: 0.31692, acc: 0.910, eval done total : 263.77766728401184 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.910) was saved at iter 2000.
+global step 2050/12000, epoch: 0, batch: 2050, rank_id: 0, loss: 0.110229, lr: 0.0000027136, speed: 0.1510 step/s
+global step 2100/12000, epoch: 0, batch: 2100, rank_id: 0, loss: 0.068371, lr: 0.0000027000, speed: 1.3141 step/s
+global step 2150/12000, epoch: 0, batch: 2150, rank_id: 0, loss: 0.103025, lr: 0.0000026864, speed: 1.2981 step/s
+global step 2200/12000, epoch: 0, batch: 2200, rank_id: 0, loss: 0.087703, lr: 0.0000026727, speed: 1.3072 step/s
+global step 2250/12000, epoch: 0, batch: 2250, rank_id: 0, loss: 0.090613, lr: 0.0000026591, speed: 1.3257 step/s
+global step 2300/12000, epoch: 0, batch: 2300, rank_id: 0, loss: 0.117758, lr: 0.0000026455, speed: 1.3221 step/s
+global step 2350/12000, epoch: 0, batch: 2350, rank_id: 0, loss: 0.135540, lr: 0.0000026318, speed: 1.3296 step/s
+global step 2400/12000, epoch: 0, batch: 2400, rank_id: 0, loss: 0.277736, lr: 0.0000026182, speed: 1.3464 step/s
+global step 2450/12000, epoch: 0, batch: 2450, rank_id: 0, loss: 0.090373, lr: 0.0000026045, speed: 1.3362 step/s
+global step 2500/12000, epoch: 0, batch: 2500, rank_id: 0, loss: 0.181388, lr: 0.0000025909, speed: 1.3396 step/s
+global step 2550/12000, epoch: 0, batch: 2550, rank_id: 0, loss: 0.130027, lr: 0.0000025773, speed: 1.3152 step/s
+global step 2600/12000, epoch: 0, batch: 2600, rank_id: 0, loss: 0.153300, lr: 0.0000025636, speed: 1.3395 step/s
+global step 2650/12000, epoch: 0, batch: 2650, rank_id: 0, loss: 0.098536, lr: 0.0000025500, speed: 1.3258 step/s
+global step 2700/12000, epoch: 0, batch: 2700, rank_id: 0, loss: 0.186551, lr: 0.0000025364, speed: 1.3124 step/s
+global step 2750/12000, epoch: 0, batch: 2750, rank_id: 0, loss: 0.099526, lr: 0.0000025227, speed: 1.3251 step/s
+global step 2800/12000, epoch: 0, batch: 2800, rank_id: 0, loss: 0.171943, lr: 0.0000025091, speed: 1.3334 step/s
+global step 2850/12000, epoch: 0, batch: 2850, rank_id: 0, loss: 0.153312, lr: 0.0000024955, speed: 1.3483 step/s
+global step 2900/12000, epoch: 0, batch: 2900, rank_id: 0, loss: 0.132467, lr: 0.0000024818, speed: 1.3287 step/s
+global step 2950/12000, epoch: 0, batch: 2950, rank_id: 0, loss: 0.212041, lr: 0.0000024682, speed: 1.3316 step/s
+global step 3000/12000, epoch: 0, batch: 3000, rank_id: 0, loss: 0.140027, lr: 0.0000024545, speed: 1.3385 step/s
+eval loss: 0.17843, acc: 0.912, eval loss: 0.32636, acc: 0.909, eval done total : 264.44744062423706 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.910) was saved at iter 2000.
+global step 3050/12000, epoch: 0, batch: 3050, rank_id: 0, loss: 0.172660, lr: 0.0000024409, speed: 0.1631 step/s
+global step 3100/12000, epoch: 0, batch: 3100, rank_id: 0, loss: 0.040927, lr: 0.0000024273, speed: 1.3070 step/s
+global step 3150/12000, epoch: 0, batch: 3150, rank_id: 0, loss: 0.138907, lr: 0.0000024136, speed: 1.3271 step/s
+global step 3200/12000, epoch: 0, batch: 3200, rank_id: 0, loss: 0.127766, lr: 0.0000024000, speed: 1.3199 step/s
+global step 3250/12000, epoch: 0, batch: 3250, rank_id: 0, loss: 0.140589, lr: 0.0000023864, speed: 1.3147 step/s
+global step 3300/12000, epoch: 0, batch: 3300, rank_id: 0, loss: 0.165119, lr: 0.0000023727, speed: 1.3126 step/s
+global step 3350/12000, epoch: 0, batch: 3350, rank_id: 0, loss: 0.083661, lr: 0.0000023591, speed: 1.3187 step/s
+global step 3400/12000, epoch: 0, batch: 3400, rank_id: 0, loss: 0.143739, lr: 0.0000023455, speed: 1.3420 step/s
+global step 3450/12000, epoch: 0, batch: 3450, rank_id: 0, loss: 0.205299, lr: 0.0000023318, speed: 1.3071 step/s
+global step 3500/12000, epoch: 0, batch: 3500, rank_id: 0, loss: 0.123441, lr: 0.0000023182, speed: 1.3222 step/s
+global step 3550/12000, epoch: 0, batch: 3550, rank_id: 0, loss: 0.263046, lr: 0.0000023045, speed: 1.3303 step/s
+global step 3600/12000, epoch: 0, batch: 3600, rank_id: 0, loss: 0.177573, lr: 0.0000022909, speed: 1.2890 step/s
+global step 3650/12000, epoch: 0, batch: 3650, rank_id: 0, loss: 0.160361, lr: 0.0000022773, speed: 1.3296 step/s
+global step 3700/12000, epoch: 0, batch: 3700, rank_id: 0, loss: 0.065726, lr: 0.0000022636, speed: 1.2938 step/s
+global step 3750/12000, epoch: 0, batch: 3750, rank_id: 0, loss: 0.200189, lr: 0.0000022500, speed: 1.3178 step/s
+global step 3800/12000, epoch: 0, batch: 3800, rank_id: 0, loss: 0.169026, lr: 0.0000022364, speed: 1.2911 step/s
+global step 3850/12000, epoch: 0, batch: 3850, rank_id: 0, loss: 0.100107, lr: 0.0000022227, speed: 1.2998 step/s
+global step 3900/12000, epoch: 0, batch: 3900, rank_id: 0, loss: 0.056231, lr: 0.0000022091, speed: 1.3336 step/s
+global step 3950/12000, epoch: 0, batch: 3950, rank_id: 0, loss: 0.167753, lr: 0.0000021955, speed: 1.3138 step/s
+global step 4000/12000, epoch: 0, batch: 4000, rank_id: 0, loss: 0.138304, lr: 0.0000021818, speed: 1.2763 step/s
+eval loss: 0.17997, acc: 0.913, eval loss: 0.32118, acc: 0.910, eval done total : 264.2835590839386 s
+[EVAL] The model with matched dev ACC (0.913) and mismatched dev ACC (0.910) was saved at iter 4000.
+global step 4050/12000, epoch: 0, batch: 4050, rank_id: 0, loss: 0.058263, lr: 0.0000021682, speed: 0.1546 step/s
+global step 4100/12000, epoch: 0, batch: 4100, rank_id: 0, loss: 0.265191, lr: 0.0000021545, speed: 1.2573 step/s
+global step 4150/12000, epoch: 0, batch: 4150, rank_id: 0, loss: 0.093001, lr: 0.0000021409, speed: 1.2637 step/s
+global step 4200/12000, epoch: 0, batch: 4200, rank_id: 0, loss: 0.110398, lr: 0.0000021273, speed: 1.2690 step/s
+global step 4250/12000, epoch: 0, batch: 4250, rank_id: 0, loss: 0.103351, lr: 0.0000021136, speed: 1.2630 step/s
+global step 4300/12000, epoch: 0, batch: 4300, rank_id: 0, loss: 0.173494, lr: 0.0000021000, speed: 1.2620 step/s
+global step 4350/12000, epoch: 0, batch: 4350, rank_id: 0, loss: 0.165312, lr: 0.0000020864, speed: 1.2675 step/s
+global step 4400/12000, epoch: 0, batch: 4400, rank_id: 0, loss: 0.147612, lr: 0.0000020727, speed: 1.2691 step/s
+global step 4450/12000, epoch: 0, batch: 4450, rank_id: 0, loss: 0.143070, lr: 0.0000020591, speed: 1.2602 step/s
+global step 4500/12000, epoch: 0, batch: 4500, rank_id: 0, loss: 0.280394, lr: 0.0000020455, speed: 1.2777 step/s
+global step 4550/12000, epoch: 0, batch: 4550, rank_id: 0, loss: 0.255303, lr: 0.0000020318, speed: 1.2802 step/s
+global step 4600/12000, epoch: 0, batch: 4600, rank_id: 0, loss: 0.231034, lr: 0.0000020182, speed: 1.2910 step/s
+global step 4650/12000, epoch: 0, batch: 4650, rank_id: 0, loss: 0.103171, lr: 0.0000020045, speed: 1.2546 step/s
+global step 4700/12000, epoch: 0, batch: 4700, rank_id: 0, loss: 0.240455, lr: 0.0000019909, speed: 1.2559 step/s
+global step 4750/12000, epoch: 0, batch: 4750, rank_id: 0, loss: 0.145747, lr: 0.0000019773, speed: 1.2963 step/s
+global step 4800/12000, epoch: 0, batch: 4800, rank_id: 0, loss: 0.065567, lr: 0.0000019636, speed: 1.2827 step/s
+global step 4850/12000, epoch: 0, batch: 4850, rank_id: 0, loss: 0.210610, lr: 0.0000019500, speed: 1.2786 step/s
+global step 4900/12000, epoch: 0, batch: 4900, rank_id: 0, loss: 0.250352, lr: 0.0000019364, speed: 1.2743 step/s
+global step 4950/12000, epoch: 0, batch: 4950, rank_id: 0, loss: 0.103003, lr: 0.0000019227, speed: 1.2738 step/s
+global step 5000/12000, epoch: 0, batch: 5000, rank_id: 0, loss: 0.156266, lr: 0.0000019091, speed: 1.2623 step/s
+eval loss: 0.17612, acc: 0.912, eval loss: 0.32388, acc: 0.910, eval done total : 264.13684725761414 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.910) was saved at iter 5000.
+global step 5050/12000, epoch: 0, batch: 5050, rank_id: 0, loss: 0.116967, lr: 0.0000018955, speed: 0.1543 step/s
+global step 5100/12000, epoch: 0, batch: 5100, rank_id: 0, loss: 0.142168, lr: 0.0000018818, speed: 1.2870 step/s
+global step 5150/12000, epoch: 0, batch: 5150, rank_id: 0, loss: 0.096785, lr: 0.0000018682, speed: 1.2593 step/s
+global step 5200/12000, epoch: 0, batch: 5200, rank_id: 0, loss: 0.100988, lr: 0.0000018545, speed: 1.2677 step/s
+global step 5250/12000, epoch: 0, batch: 5250, rank_id: 0, loss: 0.230805, lr: 0.0000018409, speed: 1.2606 step/s
+global step 5300/12000, epoch: 0, batch: 5300, rank_id: 0, loss: 0.048059, lr: 0.0000018273, speed: 1.2698 step/s
+global step 5350/12000, epoch: 0, batch: 5350, rank_id: 0, loss: 0.100832, lr: 0.0000018136, speed: 1.3068 step/s
+global step 5400/12000, epoch: 0, batch: 5400, rank_id: 0, loss: 0.107167, lr: 0.0000018000, speed: 1.2696 step/s
+global step 5450/12000, epoch: 0, batch: 5450, rank_id: 0, loss: 0.091205, lr: 0.0000017864, speed: 1.2860 step/s
+global step 5500/12000, epoch: 0, batch: 5500, rank_id: 0, loss: 0.178258, lr: 0.0000017727, speed: 1.2705 step/s
+global step 5550/12000, epoch: 0, batch: 5550, rank_id: 0, loss: 0.100784, lr: 0.0000017591, speed: 1.2733 step/s
+global step 5600/12000, epoch: 0, batch: 5600, rank_id: 0, loss: 0.177400, lr: 0.0000017455, speed: 1.2653 step/s
+global step 5650/12000, epoch: 0, batch: 5650, rank_id: 0, loss: 0.284051, lr: 0.0000017318, speed: 1.2755 step/s
+global step 5700/12000, epoch: 0, batch: 5700, rank_id: 0, loss: 0.069305, lr: 0.0000017182, speed: 1.2785 step/s
+global step 5750/12000, epoch: 0, batch: 5750, rank_id: 0, loss: 0.347258, lr: 0.0000017045, speed: 1.2696 step/s
+global step 5800/12000, epoch: 0, batch: 5800, rank_id: 0, loss: 0.160820, lr: 0.0000016909, speed: 1.2626 step/s
+global step 5850/12000, epoch: 0, batch: 5850, rank_id: 0, loss: 0.257095, lr: 0.0000016773, speed: 1.2915 step/s
+global step 5900/12000, epoch: 0, batch: 5900, rank_id: 0, loss: 0.168597, lr: 0.0000016636, speed: 1.2997 step/s
+global step 5950/12000, epoch: 0, batch: 5950, rank_id: 0, loss: 0.145632, lr: 0.0000016500, speed: 1.2841 step/s
+global step 6000/12000, epoch: 0, batch: 6000, rank_id: 0, loss: 0.300719, lr: 0.0000016364, speed: 1.2626 step/s
+eval loss: 0.17781, acc: 0.912, eval loss: 0.32103, acc: 0.910, eval done total : 263.4608175754547 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.910) was saved at iter 6000.
+global step 6050/12000, epoch: 0, batch: 6050, rank_id: 0, loss: 0.121023, lr: 0.0000016227, speed: 0.1502 step/s
+global step 6100/12000, epoch: 0, batch: 6100, rank_id: 0, loss: 0.094712, lr: 0.0000016091, speed: 1.2897 step/s
+global step 6150/12000, epoch: 1, batch: 6150, rank_id: 0, loss: 0.042446, lr: 0.0000015955, speed: 1.2663 step/s
+global step 6200/12000, epoch: 1, batch: 6200, rank_id: 0, loss: 0.210973, lr: 0.0000015818, speed: 1.2663 step/s
+global step 6250/12000, epoch: 1, batch: 6250, rank_id: 0, loss: 0.065646, lr: 0.0000015682, speed: 1.2751 step/s
+global step 6300/12000, epoch: 1, batch: 6300, rank_id: 0, loss: 0.191497, lr: 0.0000015545, speed: 1.2734 step/s
+global step 6350/12000, epoch: 1, batch: 6350, rank_id: 0, loss: 0.068337, lr: 0.0000015409, speed: 1.2825 step/s
+global step 6400/12000, epoch: 1, batch: 6400, rank_id: 0, loss: 0.145571, lr: 0.0000015273, speed: 1.2736 step/s
+global step 6450/12000, epoch: 1, batch: 6450, rank_id: 0, loss: 0.074592, lr: 0.0000015136, speed: 1.2788 step/s
+global step 6500/12000, epoch: 1, batch: 6500, rank_id: 0, loss: 0.144900, lr: 0.0000015000, speed: 1.2458 step/s
+global step 6550/12000, epoch: 1, batch: 6550, rank_id: 0, loss: 0.176652, lr: 0.0000014864, speed: 1.2923 step/s
+global step 6600/12000, epoch: 1, batch: 6600, rank_id: 0, loss: 0.165844, lr: 0.0000014727, speed: 1.2812 step/s
+global step 6650/12000, epoch: 1, batch: 6650, rank_id: 0, loss: 0.055096, lr: 0.0000014591, speed: 1.2584 step/s
+global step 6700/12000, epoch: 1, batch: 6700, rank_id: 0, loss: 0.091325, lr: 0.0000014455, speed: 1.2961 step/s
+global step 6750/12000, epoch: 1, batch: 6750, rank_id: 0, loss: 0.051709, lr: 0.0000014318, speed: 1.2883 step/s
+global step 6800/12000, epoch: 1, batch: 6800, rank_id: 0, loss: 0.091683, lr: 0.0000014182, speed: 1.2778 step/s
+global step 6850/12000, epoch: 1, batch: 6850, rank_id: 0, loss: 0.152614, lr: 0.0000014045, speed: 1.2855 step/s
+global step 6900/12000, epoch: 1, batch: 6900, rank_id: 0, loss: 0.195005, lr: 0.0000013909, speed: 1.2734 step/s
+global step 6950/12000, epoch: 1, batch: 6950, rank_id: 0, loss: 0.066107, lr: 0.0000013773, speed: 1.2911 step/s
+global step 7000/12000, epoch: 1, batch: 7000, rank_id: 0, loss: 0.065509, lr: 0.0000013636, speed: 1.2742 step/s
+eval loss: 0.17630, acc: 0.912, eval loss: 0.32285, acc: 0.910, eval done total : 263.744512796402 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.910) was saved at iter 6000.
+global step 7050/12000, epoch: 1, batch: 7050, rank_id: 0, loss: 0.083942, lr: 0.0000013500, speed: 0.1627 step/s
+global step 7100/12000, epoch: 1, batch: 7100, rank_id: 0, loss: 0.124091, lr: 0.0000013364, speed: 1.2483 step/s
+global step 7150/12000, epoch: 1, batch: 7150, rank_id: 0, loss: 0.140201, lr: 0.0000013227, speed: 1.2952 step/s
+global step 7200/12000, epoch: 1, batch: 7200, rank_id: 0, loss: 0.094806, lr: 0.0000013091, speed: 1.2537 step/s
+global step 7250/12000, epoch: 1, batch: 7250, rank_id: 0, loss: 0.150873, lr: 0.0000012955, speed: 1.2754 step/s
+global step 7300/12000, epoch: 1, batch: 7300, rank_id: 0, loss: 0.251872, lr: 0.0000012818, speed: 1.2795 step/s
+global step 7350/12000, epoch: 1, batch: 7350, rank_id: 0, loss: 0.128489, lr: 0.0000012682, speed: 1.2824 step/s
+global step 7400/12000, epoch: 1, batch: 7400, rank_id: 0, loss: 0.183151, lr: 0.0000012545, speed: 1.2826 step/s
+global step 7450/12000, epoch: 1, batch: 7450, rank_id: 0, loss: 0.085640, lr: 0.0000012409, speed: 1.2731 step/s
+global step 7500/12000, epoch: 1, batch: 7500, rank_id: 0, loss: 0.078785, lr: 0.0000012273, speed: 1.2871 step/s
+global step 7550/12000, epoch: 1, batch: 7550, rank_id: 0, loss: 0.240469, lr: 0.0000012136, speed: 1.2880 step/s
+global step 7600/12000, epoch: 1, batch: 7600, rank_id: 0, loss: 0.118987, lr: 0.0000012000, speed: 1.2661 step/s
+global step 7650/12000, epoch: 1, batch: 7650, rank_id: 0, loss: 0.148511, lr: 0.0000011864, speed: 1.2919 step/s
+global step 7700/12000, epoch: 1, batch: 7700, rank_id: 0, loss: 0.130278, lr: 0.0000011727, speed: 1.2852 step/s
+global step 7750/12000, epoch: 1, batch: 7750, rank_id: 0, loss: 0.159745, lr: 0.0000011591, speed: 1.2934 step/s
+global step 7800/12000, epoch: 1, batch: 7800, rank_id: 0, loss: 0.122623, lr: 0.0000011455, speed: 1.2703 step/s
+global step 7850/12000, epoch: 1, batch: 7850, rank_id: 0, loss: 0.181551, lr: 0.0000011318, speed: 1.2710 step/s
+global step 7900/12000, epoch: 1, batch: 7900, rank_id: 0, loss: 0.229410, lr: 0.0000011182, speed: 1.2876 step/s
+global step 7950/12000, epoch: 1, batch: 7950, rank_id: 0, loss: 0.132131, lr: 0.0000011045, speed: 1.2759 step/s
+global step 8000/12000, epoch: 1, batch: 8000, rank_id: 0, loss: 0.107902, lr: 0.0000010909, speed: 1.2850 step/s
+eval loss: 0.17941, acc: 0.912, eval loss: 0.32045, acc: 0.911, eval done total : 262.47793436050415 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.911) was saved at iter 8000.
+global step 8050/12000, epoch: 1, batch: 8050, rank_id: 0, loss: 0.107262, lr: 0.0000010773, speed: 0.1507 step/s
+global step 8100/12000, epoch: 1, batch: 8100, rank_id: 0, loss: 0.162459, lr: 0.0000010636, speed: 1.2692 step/s
+global step 8150/12000, epoch: 1, batch: 8150, rank_id: 0, loss: 0.295918, lr: 0.0000010500, speed: 1.2615 step/s
+global step 8200/12000, epoch: 1, batch: 8200, rank_id: 0, loss: 0.197055, lr: 0.0000010364, speed: 1.2806 step/s
+global step 8250/12000, epoch: 1, batch: 8250, rank_id: 0, loss: 0.233444, lr: 0.0000010227, speed: 1.2804 step/s
+global step 8300/12000, epoch: 1, batch: 8300, rank_id: 0, loss: 0.183003, lr: 0.0000010091, speed: 1.2781 step/s
+global step 8350/12000, epoch: 1, batch: 8350, rank_id: 0, loss: 0.114976, lr: 0.0000009955, speed: 1.2674 step/s
+global step 8400/12000, epoch: 1, batch: 8400, rank_id: 0, loss: 0.171689, lr: 0.0000009818, speed: 1.2808 step/s
+global step 8450/12000, epoch: 1, batch: 8450, rank_id: 0, loss: 0.101902, lr: 0.0000009682, speed: 1.2552 step/s
+global step 8500/12000, epoch: 1, batch: 8500, rank_id: 0, loss: 0.072903, lr: 0.0000009545, speed: 1.2948 step/s
+global step 8550/12000, epoch: 1, batch: 8550, rank_id: 0, loss: 0.064568, lr: 0.0000009409, speed: 1.2449 step/s
+global step 8600/12000, epoch: 1, batch: 8600, rank_id: 0, loss: 0.100547, lr: 0.0000009273, speed: 1.2720 step/s
+global step 8650/12000, epoch: 1, batch: 8650, rank_id: 0, loss: 0.192267, lr: 0.0000009136, speed: 1.2910 step/s
+global step 8700/12000, epoch: 1, batch: 8700, rank_id: 0, loss: 0.075826, lr: 0.0000009000, speed: 1.3011 step/s
+global step 8750/12000, epoch: 1, batch: 8750, rank_id: 0, loss: 0.163429, lr: 0.0000008864, speed: 1.2771 step/s
+global step 8800/12000, epoch: 1, batch: 8800, rank_id: 0, loss: 0.411801, lr: 0.0000008727, speed: 1.2666 step/s
+global step 8850/12000, epoch: 1, batch: 8850, rank_id: 0, loss: 0.051479, lr: 0.0000008591, speed: 1.2810 step/s
+global step 8900/12000, epoch: 1, batch: 8900, rank_id: 0, loss: 0.156839, lr: 0.0000008455, speed: 1.2695 step/s
+global step 8950/12000, epoch: 1, batch: 8950, rank_id: 0, loss: 0.081218, lr: 0.0000008318, speed: 1.2740 step/s
+global step 9000/12000, epoch: 1, batch: 9000, rank_id: 0, loss: 0.184205, lr: 0.0000008182, speed: 1.2952 step/s
+eval loss: 0.18190, acc: 0.912, eval loss: 0.31798, acc: 0.911, eval done total : 262.071914434433 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.911) was saved at iter 9000.
+global step 9050/12000, epoch: 1, batch: 9050, rank_id: 0, loss: 0.174824, lr: 0.0000008045, speed: 0.1514 step/s
+global step 9100/12000, epoch: 1, batch: 9100, rank_id: 0, loss: 0.062070, lr: 0.0000007909, speed: 1.2660 step/s
+global step 9150/12000, epoch: 1, batch: 9150, rank_id: 0, loss: 0.167459, lr: 0.0000007773, speed: 1.3062 step/s
+Found inf or nan, current scale is: 524288.0, decrease to: 524288.0*0.5
+global step 9200/12000, epoch: 1, batch: 9200, rank_id: 0, loss: 0.124365, lr: 0.0000007636, speed: 1.3001 step/s
+global step 9250/12000, epoch: 1, batch: 9250, rank_id: 0, loss: 0.259679, lr: 0.0000007500, speed: 1.3504 step/s
+global step 9300/12000, epoch: 1, batch: 9300, rank_id: 0, loss: 0.144230, lr: 0.0000007364, speed: 1.3465 step/s
+global step 9350/12000, epoch: 1, batch: 9350, rank_id: 0, loss: 0.098689, lr: 0.0000007227, speed: 1.3488 step/s
+global step 9400/12000, epoch: 1, batch: 9400, rank_id: 0, loss: 0.050657, lr: 0.0000007091, speed: 1.3375 step/s
+global step 9450/12000, epoch: 1, batch: 9450, rank_id: 0, loss: 0.058661, lr: 0.0000006955, speed: 1.3353 step/s
+global step 9500/12000, epoch: 1, batch: 9500, rank_id: 0, loss: 0.068459, lr: 0.0000006818, speed: 1.3555 step/s
+global step 9550/12000, epoch: 1, batch: 9550, rank_id: 0, loss: 0.067761, lr: 0.0000006682, speed: 1.3421 step/s
+global step 9600/12000, epoch: 1, batch: 9600, rank_id: 0, loss: 0.061289, lr: 0.0000006545, speed: 1.3501 step/s
+global step 9650/12000, epoch: 1, batch: 9650, rank_id: 0, loss: 0.102252, lr: 0.0000006409, speed: 1.3431 step/s
+global step 9700/12000, epoch: 1, batch: 9700, rank_id: 0, loss: 0.206443, lr: 0.0000006273, speed: 1.3374 step/s
+global step 9750/12000, epoch: 1, batch: 9750, rank_id: 0, loss: 0.032869, lr: 0.0000006136, speed: 1.3382 step/s
+global step 9800/12000, epoch: 1, batch: 9800, rank_id: 0, loss: 0.144873, lr: 0.0000006000, speed: 1.3487 step/s
+global step 9850/12000, epoch: 1, batch: 9850, rank_id: 0, loss: 0.148186, lr: 0.0000005864, speed: 1.3232 step/s
+global step 9900/12000, epoch: 1, batch: 9900, rank_id: 0, loss: 0.059559, lr: 0.0000005727, speed: 1.3439 step/s
+global step 9950/12000, epoch: 1, batch: 9950, rank_id: 0, loss: 0.124021, lr: 0.0000005591, speed: 1.3492 step/s
+global step 10000/12000, epoch: 1, batch: 10000, rank_id: 0, loss: 0.136631, lr: 0.0000005455, speed: 1.3334 step/s
+eval loss: 0.18030, acc: 0.912, eval loss: 0.32051, acc: 0.911, eval done total : 262.38790583610535 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.911) was saved at iter 9000.
+global step 10050/12000, epoch: 1, batch: 10050, rank_id: 0, loss: 0.171986, lr: 0.0000005318, speed: 0.1641 step/s
+global step 10100/12000, epoch: 1, batch: 10100, rank_id: 0, loss: 0.256165, lr: 0.0000005182, speed: 1.3595 step/s
+global step 10150/12000, epoch: 1, batch: 10150, rank_id: 0, loss: 0.121671, lr: 0.0000005045, speed: 1.3355 step/s
+global step 10200/12000, epoch: 1, batch: 10200, rank_id: 0, loss: 0.207780, lr: 0.0000004909, speed: 1.3530 step/s
+global step 10250/12000, epoch: 1, batch: 10250, rank_id: 0, loss: 0.308493, lr: 0.0000004773, speed: 1.3386 step/s
+global step 10300/12000, epoch: 1, batch: 10300, rank_id: 0, loss: 0.130529, lr: 0.0000004636, speed: 1.3510 step/s
+global step 10350/12000, epoch: 1, batch: 10350, rank_id: 0, loss: 0.111837, lr: 0.0000004500, speed: 1.2600 step/s
+global step 10400/12000, epoch: 1, batch: 10400, rank_id: 0, loss: 0.186475, lr: 0.0000004364, speed: 1.3229 step/s
+global step 10450/12000, epoch: 1, batch: 10450, rank_id: 0, loss: 0.094521, lr: 0.0000004227, speed: 1.3526 step/s
+global step 10500/12000, epoch: 1, batch: 10500, rank_id: 0, loss: 0.116740, lr: 0.0000004091, speed: 1.3386 step/s
+global step 10550/12000, epoch: 1, batch: 10550, rank_id: 0, loss: 0.170693, lr: 0.0000003955, speed: 1.3276 step/s
+global step 10600/12000, epoch: 1, batch: 10600, rank_id: 0, loss: 0.101388, lr: 0.0000003818, speed: 1.3426 step/s
+global step 10650/12000, epoch: 1, batch: 10650, rank_id: 0, loss: 0.189050, lr: 0.0000003682, speed: 1.3392 step/s
+global step 10700/12000, epoch: 1, batch: 10700, rank_id: 0, loss: 0.177817, lr: 0.0000003545, speed: 1.3496 step/s
+global step 10750/12000, epoch: 1, batch: 10750, rank_id: 0, loss: 0.209307, lr: 0.0000003409, speed: 1.3357 step/s
+global step 10800/12000, epoch: 1, batch: 10800, rank_id: 0, loss: 0.056138, lr: 0.0000003273, speed: 1.3130 step/s
+global step 10850/12000, epoch: 1, batch: 10850, rank_id: 0, loss: 0.103608, lr: 0.0000003136, speed: 1.3397 step/s
+global step 10900/12000, epoch: 1, batch: 10900, rank_id: 0, loss: 0.153448, lr: 0.0000003000, speed: 1.3477 step/s
+global step 10950/12000, epoch: 1, batch: 10950, rank_id: 0, loss: 0.102354, lr: 0.0000002864, speed: 1.3235 step/s
+global step 11000/12000, epoch: 1, batch: 11000, rank_id: 0, loss: 0.089408, lr: 0.0000002727, speed: 1.3424 step/s
+eval loss: 0.17867, acc: 0.912, eval loss: 0.32253, acc: 0.910, eval done total : 262.60903573036194 s
+[EVAL] The model with matched dev ACC (0.912) and mismatched dev ACC (0.911) was saved at iter 9000.
+global step 11050/12000, epoch: 1, batch: 11050, rank_id: 0, loss: 0.059181, lr: 0.0000002591, speed: 0.1645 step/s
+global step 11100/12000, epoch: 1, batch: 11100, rank_id: 0, loss: 0.097482, lr: 0.0000002455, speed: 1.3423 step/s
+global step 11150/12000, epoch: 1, batch: 11150, rank_id: 0, loss: 0.280031, lr: 0.0000002318, speed: 1.3282 step/s
+global step 11200/12000, epoch: 1, batch: 11200, rank_id: 0, loss: 0.159061, lr: 0.0000002182, speed: 1.3522 step/s
+global step 11250/12000, epoch: 1, batch: 11250, rank_id: 0, loss: 0.092455, lr: 0.0000002045, speed: 1.3408 step/s
+Found inf or nan, current scale is: 524288.0, decrease to: 524288.0*0.5
+global step 11300/12000, epoch: 1, batch: 11300, rank_id: 0, loss: 0.104785, lr: 0.0000001909, speed: 1.3637 step/s
+global step 11350/12000, epoch: 1, batch: 11350, rank_id: 0, loss: 0.184134, lr: 0.0000001773, speed: 1.3406 step/s
+global step 11400/12000, epoch: 1, batch: 11400, rank_id: 0, loss: 0.196263, lr: 0.0000001636, speed: 1.3560 step/s
+global step 11450/12000, epoch: 1, batch: 11450, rank_id: 0, loss: 0.130583, lr: 0.0000001500, speed: 1.3455 step/s
+global step 11500/12000, epoch: 1, batch: 11500, rank_id: 0, loss: 0.155629, lr: 0.0000001364, speed: 1.3504 step/s
+global step 11550/12000, epoch: 1, batch: 11550, rank_id: 0, loss: 0.116481, lr: 0.0000001227, speed: 1.3314 step/s
+global step 11600/12000, epoch: 1, batch: 11600, rank_id: 0, loss: 0.254066, lr: 0.0000001091, speed: 1.3145 step/s
+global step 11650/12000, epoch: 1, batch: 11650, rank_id: 0, loss: 0.162941, lr: 0.0000000955, speed: 1.3349 step/s
+global step 11700/12000, epoch: 1, batch: 11700, rank_id: 0, loss: 0.173349, lr: 0.0000000818, speed: 1.3186 step/s
+global step 11750/12000, epoch: 1, batch: 11750, rank_id: 0, loss: 0.153547, lr: 0.0000000682, speed: 1.3339 step/s
+global step 11800/12000, epoch: 1, batch: 11800, rank_id: 0, loss: 0.062700, lr: 0.0000000545, speed: 1.3403 step/s
+global step 11850/12000, epoch: 1, batch: 11850, rank_id: 0, loss: 0.130984, lr: 0.0000000409, speed: 1.3068 step/s
+global step 11900/12000, epoch: 1, batch: 11900, rank_id: 0, loss: 0.102266, lr: 0.0000000273, speed: 1.2940 step/s
+global step 11950/12000, epoch: 1, batch: 11950, rank_id: 0, loss: 0.115509, lr: 0.0000000136, speed: 1.3067 step/s
