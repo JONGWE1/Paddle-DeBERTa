@@ -69,15 +69,7 @@ paddle_model = deberta_v2.DebertaV2Model.from_pretrained(model_name)
 paddle_to = deberta_v2_tokenizer.DebertaV2Tokenizer.from_pretrained(model_name)
 ```
 
-运行`python compare.py`，对比官方pytorch模型和转换后的模型精度情况，误差在$10^{-5}$到$10^{-7}$量级，满足要求。
-
-### DeBERTa-large
-
-![image-20220424150007045](/home/yzw/.config/Typora/typora-user-images/image-20220424150007045.png)
-
-### DeBERTa-v2-xlarge
-
-![image-20220424152403871](/home/yzw/.config/Typora/typora-user-images/image-20220424152403871.png)
+运行`python compare.py`，可对比官方pytorch模型和转换后的模型精度情况。
 
 ## 快速开始
 
@@ -188,10 +180,6 @@ eval loss: 0.17843, acc: 0.912, eval loss: 0.32636, acc: 0.909, eval done total 
 | DeBERTa-large     | 91.1/91.1  | 91.2/91.1 | [deberta-large](https://bj.bcebos.com/v1/ai-studio-online/5109e4dabcff4a6c825b047bd06a838e719aacafb09140d68264cfa6e996d815?responseContentDisposition=attachment%3B%20filename%3Ddeberta-large-mnli.zip) |
 | DeBERTa-v2-xlarge | 91.7/91.6  | 91.7/91.6 | [deberta-v2-xlarge](https://bj.bcebos.com/v1/ai-studio-online/580d558d67b34c958c2a17427789746ed4f37cbd3bf44e8f984855b23d87466a?responseContentDisposition=attachment%3B%20filename%3Ddeberta-v2-xlarge-mnli.zip) |
 
-![image-20220501160052077](/home/yzw/.config/Typora/typora-user-images/image-20220501160052077.png)
-
-![image-20220501160003299](/home/yzw/.config/Typora/typora-user-images/image-20220501160003299.png)
-
 ### 预测
 
 预测代码参考https://github.com/PaddlePaddle/PaddleNLP/blob/develop/examples/language_model/bert/predict.py
@@ -207,10 +195,6 @@ python predict.py --model_type deberta --model_name_or_path deberta-large-mnli/m
 unzip deberta-v2-xlarge-mnli.zip
 python predict.py --model_type deberta-v2 --model_name_or_path deberta-v2-xlarge-mnli/mnli_ft_model_best --device cpu
 ```
-
-
-
-
 
 # Reference
 
