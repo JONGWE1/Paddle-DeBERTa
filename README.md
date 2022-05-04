@@ -100,8 +100,6 @@ python run_glue_deberta.py \
     --device 'gpu' \
     --warmup_proportion 0.1 \
     --output_dir 'deberta-large-mnli/' \
-    --pad_to_max_seq_len True \
-    --return_attention_mask True \
     --fp16
 ```
 
@@ -124,8 +122,6 @@ python -m paddle.distributed.launch --gpus "0,1,2,3" run_glue_deberta.py \
     --device 'gpu' \
     --warmup_proportion 0.1 \
     --output_dir 'deberta-large-mnli/' \
-    --pad_to_max_seq_len True \
-    --return_attention_mask True \
     --fp16
 ```
 
@@ -135,15 +131,12 @@ python -m paddle.distributed.launch --gpus "0,1,2,3" run_glue_deberta.py \
 - `model_name_or_path` 指示了某种特定配置的模型，对应有其预训练模型和预训练时使用的 tokenizer。
 - `max_seq_length` 表示每个输入句子tokenize后的最大长度，长的序列将被截断，短的序列将被填充。
 - `learning_rate` 表示基础学习率大小，将于learning rate scheduler产生的值相乘作为当前学习率。
-
 - `num_train_epochs` 表示训练轮数。
 - `logging_steps` 表示日志打印间隔。
 - `save_steps` 表示模型保存及评估间隔。
 - `max_steps` 表示最大训练步数。若训练`num_train_epochs`轮包含的训练步数大于该值，则达到`max_steps`后就提前结束。
-
 - `train_batch_size` 表示训练时每次迭代**每张卡**上的样本数目。
 - `val_batch_size` 表示验证时每次迭代**每张卡**上的样本数目。
-
 - `weight_decay` 表示AdamW优化器中使用的weight_decay的系数。
 - `adam_epsilon` 表示AdamW优化器中使用的epsilon值。
 - `warmup_steps` 表示动态学习率热启的step数。
@@ -152,8 +145,6 @@ python -m paddle.distributed.launch --gpus "0,1,2,3" run_glue_deberta.py \
 - `logging_steps` 表示日志打印间隔。
 - `save_steps` 表示模型保存及评估间隔。
 - `device` 表示训练使用的设备, 'gpu'表示使用GPU, 'xpu'表示使用百度昆仑卡, 'cpu'表示使用CPU。
-- `pad_to_max_seq_len` 指示tokenize操作是否填充短的序列，按照官方的实现应设置为True。
-- `return_attention_mask` 指示是否需要attention_mask输入，按照官方的实现应设置为True。
 - `fp16` 指示是否启用自动混合精度训练。
 
 Fine-tuning过程将按照 `logging_steps` 和 `save_steps` 的设置打印日志，eval后保存当前最优模型：
