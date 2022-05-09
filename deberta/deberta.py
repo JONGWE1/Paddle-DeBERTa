@@ -1240,11 +1240,9 @@ class DebertaModel(DebertaPretrainedModel):
 
 
 class DebertaForSequenceClassification(DebertaPretrainedModel):
-    def __init__(self, deberta, num_classes=3, dropout=None, stop_gradient=None, pretrained=None):
+    def __init__(self, deberta, num_classes=3, dropout=None):
         super().__init__()
         self.num_classes = num_classes
-        self.stop_gradient = stop_gradient
-        self.pretrained = pretrained
 
         self.deberta = deberta
         output_dim = self.deberta._config.hidden_size
@@ -1255,7 +1253,6 @@ class DebertaForSequenceClassification(DebertaPretrainedModel):
 
         self.apply(self._init_weights)
 
-    @paddle.jit.to_static
     def forward(
             self,
             input_ids=None,
@@ -1284,3 +1281,85 @@ class DebertaForSequenceClassification(DebertaPretrainedModel):
 
         return logits
 
+
+class DebertaForTokenClassification(DebertaPretrainedModel):
+    def __init__(self, deberta, num_classes=3, dropout=None):
+        super().__init__()
+        self.num_classes = num_classes
+
+        self.deberta = deberta
+        output_dim = self.deberta._config.hidden_size
+
+        self.classifier = nn.Linear(output_dim, self.num_classes)
+        drop_out = self.deberta._config.hidden_dropout_prob if dropout is None else dropout
+        self.dropout = StableDropout(drop_out)
+
+        self.apply(self._init_weights)
+
+    def forward(
+            self,
+            input_ids=None,
+            attention_mask=None,
+            token_type_ids=None,
+            position_ids=None,
+            inputs_embeds=None,
+            labels=None,
+            output_attentions=None,
+            output_hidden_states=None,
+            return_dict=None,
+    ):
+        sequence_output, _ = self.deberta(
+            input_ids,
+            token_type_ids=token_type_ids,
+            attention_mask=attention_mask,
+            position_ids=position_ids,
+            inputs_embeds=inputs_embeds,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            return_dict=True,
+        )
+
+        sequence_output = self.dropout(sequence_output)
+        logits = self.classifier(sequence_output)
+
+        return logits
+
+
+class DebertaForQuestionAnswering(DebertaPretrainedModel):
+    def __init__(self, deberta, dropout=None):
+        super().__init__()
+        self.deberta = deberta
+
+        output_dim = self.deberta._config.hidden_size
+        self.classifier = nn.Linear(output_dim, 2)
+
+        self.apply(self._init_weights)
+
+    def forward(
+            self,
+            input_ids=None,
+            attention_mask=None,
+            token_type_ids=None,
+            position_ids=None,
+            inputs_embeds=None,
+            labels=None,
+            output_attentions=None,
+            output_hidden_states=None,
+            return_dict=None,
+    ):
+        sequence_output, _ = self.deberta(
+            input_ids,
+            token_type_ids=token_type_ids,
+            attention_mask=attention_mask,
+            position_ids=position_ids,
+            inputs_embeds=inputs_embeds,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            return_dict=True,
+        )
+
+        logits = self.classifier(sequence_output)
+        logits = paddle.transpose(logits, perm=[2, 0, 1])
+        start_logits, end_logits = paddle.unstack(x=logits, axis=0)
+
+        return start_logits, end_logits
